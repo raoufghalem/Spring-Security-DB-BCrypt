@@ -1,4 +1,4 @@
-package com.iSecure.config.connect;
+package com.iSecure.config.SecureEntity;
 
 import java.util.Optional;
 

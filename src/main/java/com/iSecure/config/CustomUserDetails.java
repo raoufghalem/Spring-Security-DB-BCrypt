@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.iSecure.config.connect.Users;
+import com.iSecure.config.SecureEntity.Users;
 
 public class CustomUserDetails extends Users implements UserDetails {
 

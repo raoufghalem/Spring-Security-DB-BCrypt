@@ -12,7 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.iSecure.config.connect.UsersRepository;
+import com.iSecure.config.SecureEntity.UsersRepository;
 
 @EnableGlobalMethodSecurity(prePostEnabled=true)
 @Configuration
@@ -39,17 +39,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		http.csrf().disable();
 		
 		http.authorizeRequests()
-//		.anyRequest()
-// add custom filter before basic authentication happen and outside config class
 		.antMatchers("/admin/**","/manager/**").authenticated().anyRequest().permitAll()
-//		.fullyAuthenticated() 
-//		.and().addFilterBefore(customFilter(), BasicAuthenticationFilter.class)
 		.and().formLogin()
-//		.loginPage("/loginpage")
 		.permitAll();
-//		.httpBasic();
-		
-		http.logout();
+		http.logout().clearAuthentication(true);
 
 	}
 	
