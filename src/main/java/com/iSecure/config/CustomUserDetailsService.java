@@ -1,4 +1,4 @@
-package com.com.iSecure.config;
+package com.iSecure.config;
 
 import java.util.Optional;
 
@@ -8,8 +8,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.com.iSecure.config.connect.Users;
-import com.com.iSecure.config.connect.UsersRepository;
+import com.iSecure.config.connect.Users;
+import com.iSecure.config.connect.UsersRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

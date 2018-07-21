@@ -1,4 +1,4 @@
-package com.com.iSecure.config;
+package com.iSecure.config;
 
 import javax.servlet.Filter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.com.iSecure.config.connect.UsersRepository;
+import com.iSecure.config.connect.UsersRepository;
 
 @EnableGlobalMethodSecurity(prePostEnabled=true)
 @Configuration

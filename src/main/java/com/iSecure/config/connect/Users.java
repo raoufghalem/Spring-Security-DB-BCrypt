@@ -1,4 +1,4 @@
-package com.com.iSecure.config.connect;
+package com.iSecure.config.connect;
 
 import java.util.Set;
 

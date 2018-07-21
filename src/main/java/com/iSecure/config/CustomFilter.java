@@ -1,4 +1,4 @@
-package com.com.iSecure.config;
+package com.iSecure.config;
 
 import java.io.IOException;
 

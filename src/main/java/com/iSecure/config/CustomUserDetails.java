@@ -1,4 +1,4 @@
-package com.com.iSecure.config;
+package com.iSecure.config;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.com.iSecure.config.connect.Users;
+import com.iSecure.config.connect.Users;
 
 public class CustomUserDetails extends Users implements UserDetails {
 
