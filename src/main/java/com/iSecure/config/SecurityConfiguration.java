@@ -26,7 +26,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	public void configure(AuthenticationManagerBuilder auth)throws Exception{
 		auth.userDetailsService(customUserDetailsService)
 		.passwordEncoder(getPasswordEncoder());
-//		
+
+		/**
+		 * InMemory login  *Only use for dev*  never to be used in Prod
+		 */
 //			auth.inMemoryAuthentication().withUser("user").password("user").roles("USER")
 //		.and().withUser("manager").password("manager").roles("MANAGER")
 //		.and().withUser("admin").password("admin").roles("ADMIN");
