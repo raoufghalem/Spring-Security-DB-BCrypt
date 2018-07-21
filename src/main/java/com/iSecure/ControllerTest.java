@@ -1,13 +1,8 @@
 package com.iSecure;
 
-import static org.hamcrest.CoreMatchers.nullValue;
-
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -19,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.iSecure.config.CustomUserDetails;
+import com.iSecure.config.UpdatableBCrypt;
 import com.iSecure.config.SecureEntity.Role;
 import com.iSecure.config.SecureEntity.RoleRepository;
 import com.iSecure.config.SecureEntity.Users;
@@ -52,8 +48,13 @@ class ControllerRegister {
 
 		Set<Role> roleSet =new HashSet<>();
 		Role singleRole = roleRepository.findByRole("user");
-		System.out.println(singleRole);
 		roleSet.add(roleRepository.findByRole("user"));
+		
+		/*
+		 * BCrypting the plain text password
+		 */
+		 final UpdatableBCrypt bcrypt = new UpdatableBCrypt(11);
+		 user.setPassword(bcrypt.hash(user.getPassword()));
 		
 		user.setRoles(roleSet);
 		user.setLastName(" ");

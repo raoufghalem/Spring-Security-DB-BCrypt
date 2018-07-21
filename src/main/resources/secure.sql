@@ -75,11 +75,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `active`, `email`, `last_name`, `name`, `password`) VALUES
-(1, 1, 'admin', 's', 'admin', 'admin'),
-(2, 1, 'user', 's', 'user', 'user'),
-(3, 1, 'manager', 'm', 'manager', 'manager'),
-(4, 1, 'admin2', 's', 'admin2', 'admin2'),
-(5, 1, 'all', 's', 'all', 'all');
+(1, 1, 'admin', 's', 'admin', '$2a$11$kSyZAKu5yCK3r1j/Cl8SHe8Te6Y8hj2ds/w21N04A/IOc/nNoRdja'),
+(2, 1, 'user', 's', 'user', '$2a$11$uAX5hRDVBE/DrKpSU.Uyn.VwryfpcYIrtjS.hzyhHRXKLhU.rJRtO'),
+(3, 1, 'manager', 'm', 'manager', '$2a$11$xrQAvvtaicWXT0sFPNIs0Oab34uEPlnWckm.JCNWUcVw0SupEmcWu'),
+(4, 1, 'admin2', 's', 'admin2', '$2a$11$0yQvcOUMTX0AIaAZt.cjeuLjhFUeShSXNMcjNYCQIsgVDDU8hVXEe'),
+(5, 1, 'all', 's', 'all', '$2a$11$j/73Uw0W9aXFmCuPIG9odeBQwCbqSZD.dWSEB5JQlLOF4O4gLYIk6');
 
 -- --------------------------------------------------------
 
