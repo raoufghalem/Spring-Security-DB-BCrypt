@@ -43,7 +43,7 @@ public class Users {
         this.active = users.getActive();
         this.email = users.getEmail();
         this.roles = users.getRoles();
-        this.name = users.getName();
+        this.name = users.getUserName();
         this.lastName =users.getLastName();
         this.id = users.getId();
         this.password = users.getPassword();
@@ -73,12 +73,12 @@ public class Users {
         this.password = password;
     }
 
-    public String getName() {
+    public String getUserName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String userName) {
+        this.name = userName;
     }
 
     public String getLastName() {
